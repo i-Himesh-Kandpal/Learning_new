@@ -3,39 +3,29 @@
 
 using namespace std;
 
-int TotalNum(int *arr[],int size){
-   
-  int total = 0 ;
 
-  for(int i = 0; i < size; i++){
-      total += *(arr[i]);
-  }
-
-  return total;
-
-}
-
-void check(){
-  int total = 0;
-
-  cout<<&total<<endl;
-}
 
 int main(){
 
- int number[10] = {1,20,23,24,23,24,2,4,23,42};
+//  int age = 10;
+//  int &ref = age;
 
-  for(int i = 0; i < 10; i++){
-   cout<<number[i]<<endl;
-  }
+//  ref = 20;
 
- cout<<"\n"<<TotalNum(&number,10)<<endl;
+//  cout<<"ref = "<<ref<<", age = "<<age<<endl;
+  
+   //  int *ref;
+   //  int a = 10;
+   //  int &ref = a;
 
- check();
- check();
- check();
- check();
- check();
+   //  ref = 20;
+   //  cout << "a = " << a << ", ref = " << ref << endl;
+
+    int* *ptr;
+    int age = 20;
+    ptr = &age;
+
+    cout<<*ptr;
 
     return 0;
 }

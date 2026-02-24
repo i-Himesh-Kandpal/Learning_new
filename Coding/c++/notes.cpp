@@ -1,53 +1,44 @@
 #include<iostream>
-#include<vector>
+#include<string.h>
 
 using namespace std;
 
-//class
-class Student{
-  private:
-  int marks;
+class bca {
+    private:
+        int phn[10] ;
 
-  public:
-    vector<string>Names;
+    public:
+         
+        bca(string N, int r, float M){
 
-  void PrintInfo(){
-  cout<<"\n---Students who got 90---\n";
- 
-    for(string Name : Names){
-      cout<<"Name : "<<Name<<endl;
-    }
-  }
+            Name = N;
+            roll = r;
+            Marks = M;
+        }
 
-  void setMarks(int m){
-    marks = m;
-  }
+        void getinfo(){
 
-  // int getMarks( ){
-  //   return marks;
-  // }
+            cout<<"\n----Student Info----\n";
+            cout<<"Name : "<<Name<<endl;
+            cout<<"Roll num : "<<roll<<endl;
+            cout<<"Marks : "<<Marks<<endl;
+        }
 
-  void getMarks(){
-    cout<<"Marks : "<<marks<<endl;
-  }
+       string Name ;
+       int roll;
+       float Marks;
 };
+
 
 int main(){
 
- Student S1;
+    bca s1("himesh kandpal",8901,9.4);
+    bca s2("tushar",8902,9.7);
 
- S1.setMarks(25000);
- S1.Names = {"himesh","Karan","bagla"};
+    s1.getinfo();
+    s2.getinfo();
+     
 
- S1.PrintInfo();
-
- S1.getMarks();
-
-
-
-  
    
-   
-
     return 0;
 }
