@@ -1,27 +1,20 @@
 #include<iostream>
+#include<vector>
 
 using namespace std;
 
-int* prepareSomthing (int *n){
-   
-    int num = 23;
-    n = &num;
-
-    return n;
-}
-
 int main(){
 
- int n ;
+   vector <int> vec = {1,2,3,4,5};
 
- n = 2;
+   vec.push_back(2);
+   vec.pop_back();
 
- cout<<prepareSomthing(&n);
- cout<<n;
-
- int arr[5];
- int* p = arr;
- cout<<p[10];
+   for(int i : vec){
+    cout<<i;
+   }
+  cout<<"\n"<<vec.capacity();
+   cout<<endl;
 
     return 0;
 }

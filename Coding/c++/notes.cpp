@@ -3,42 +3,92 @@
 
 using namespace std;
 
-class bca {
+class student{
     private:
-        int phn[10] ;
+    long phn = 9041120005;
 
     public:
-         
-        bca(string N, int r, float M){
+    string name;
+    string department;
+    int roll;
 
-            Name = N;
-            roll = r;
-            Marks = M;
-        }
+    student(string name, string department, int roll){
+     this -> name = name;
+     this -> department = department;
+     this -> roll = roll;
+    }
 
-        void getinfo(){
+    student(student &obj){
+        this->name = obj.name;
+        this->department = obj.department;
+        this->roll = obj.roll;
+    }
 
-            cout<<"\n----Student Info----\n";
-            cout<<"Name : "<<Name<<endl;
-            cout<<"Roll num : "<<roll<<endl;
-            cout<<"Marks : "<<Marks<<endl;
-        }
+    void getinfo(){
+        cout<<"\nName : "<<name<<endl;
+        cout<<"Department : "<<department<<endl;
+        cout<<"Roll : "<<roll<<endl;
+    }
+    
+    void change_department(string New_department){
+        department = New_department;
 
-       string Name ;
-       int roll;
-       float Marks;
+        cout<<"\nDepartment changed : "<<endl;
+    }
+ 
+
+    long get(){
+      return phn;
+    }
 };
 
+class teacher{
+    public:
 
-int main(){
+    string name;
+    int* salaryptr;
 
-    bca s1("himesh kandpal",8901,9.4);
-    bca s2("tushar",8902,9.7);
-
-    s1.getinfo();
-    s2.getinfo();
+    teacher(string name, int salary){
+     this->name = name;
+      salaryptr = new int;
+     *salaryptr = salary;
+    }
      
+    teacher(teacher &obj){
+        this->name = obj.name;
+        salaryptr = new int;
+        *salaryptr = *obj.salaryptr;
+    }
 
+    void getinfo(){
+        cout<<"name : "<<name<<endl;
+        cout<<"salary : "<<*salaryptr<<endl;
+    }
+
+    ~teacher(){
+        delete salaryptr;
+        cout<<"\n------Done------\n";
+    }
+}; 
+
+int main(){ 
+
+    teacher t1("Hemu",2500000);
+    // teacher t2(t1);
+
+    t1.getinfo();
+    // *(t2.salaryptr) = 400000;
+    // t1.getinfo();
    
-    return 0;
+     
+  student s1("himesh","B.C.A",12345);
+  student s2(s1);
+
+  s1.getinfo();
+  s2.name = "himani";
+  s1.getinfo();
+  
+cout<<endl;
+ 
+ return 0;
 }
