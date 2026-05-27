@@ -5,33 +5,28 @@ using namespace std;
 
 class student{
 public:
-    string name;
-    int roll;
 
-};
+string name = "Himesh";
 
-class teacher : public student {
-public:
-    int age;
-};
+student(){
+    cout<<"non parameterized"<<endl;
+}
 
-class TA :  public student{
-public:
-    string dept;
+student(string name){
+    this->name = name;
+
+    cout<<"parameterized"<<endl;
+}
+
 };
     
 
 int main(){
 
-  TA t1;
-
-  t1.name = "Himesh";
-  t1.roll = 2356;
-  t1.dept = "BCA";
-
-  cout<<"Name : "<<t1.name<<endl;
-  cout<<"Dept : "<<t1.dept<<endl;
   
+//   student s1;
+
+   student s1("himesh");
 
 
 
