@@ -29,13 +29,13 @@ class student{
         cout<<"Department : "<<department<<endl;
         cout<<"Roll : "<<roll<<endl;
     }
-    
+
     void change_department(string New_department){
         department = New_department;
 
         cout<<"\nDepartment changed : "<<endl;
     }
- 
+
 
     long get(){
       return phn;
@@ -53,7 +53,7 @@ class teacher{
       salaryptr = new int;
      *salaryptr = salary;
     }
-     
+
     teacher(teacher &obj){
         this->name = obj.name;
         salaryptr = new int;
@@ -69,9 +69,9 @@ class teacher{
         delete salaryptr;
         cout<<"\n------Done------\n";
     }
-}; 
+};
 
-int main(){ 
+int main(){
 
     teacher t1("Hemu",2500000);
     // teacher t2(t1);
@@ -79,16 +79,16 @@ int main(){
     t1.getinfo();
     // *(t2.salaryptr) = 400000;
     // t1.getinfo();
-   
-     
+
+
   student s1("himesh","B.C.A",12345);
   student s2(s1);
 
   s1.getinfo();
   s2.name = "himani";
   s1.getinfo();
-  
+
 cout<<endl;
- 
+
  return 0;
 }
