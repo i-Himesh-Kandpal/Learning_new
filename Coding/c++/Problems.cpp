@@ -3,32 +3,29 @@
 
 using namespace std;
 
-class student{
-public:
+//PolyMorphism
+class parent{
+    public:
 
-string name = "Himesh";
-
-student(){
-    cout<<"non parameterized"<<endl;
-}
-
-student(string name){
-    this->name = name;
-
-    cout<<"parameterized"<<endl;
-}
-
+    void getinfo(){
+        cout<<"kaise ho"<<endl;
+    }
 };
-    
+
+class child : public parent{
+    public:
+
+    void getinfo(){
+        cout<<"kaisn"<<endl;
+    }
+};
 
 int main(){
 
-  
-//   student s1;
+    // parent p1;
+    child c1;
 
-   student s1("himesh");
-
-
+    c1.getinfo();
 
     return 0;
 }
