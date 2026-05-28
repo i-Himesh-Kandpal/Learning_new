@@ -1,21 +1,18 @@
 #include <stdio.h>
 
-void printHW(int n){
+void phw(int count){
 
-  int count  = n;
- if(n == 0){
-  return;
- }
- 
- printf("%d Hello world !\n ",count);
+  phw(count - 1);
 
- printHW(n-1);
-    
+  if(count == 0){
+    return;
+  }
+  printf("hello world !");
 }
 
 int main() {
-   
-  printHW(5);
+ 
+ phw(5);
 
     return 0;
 }

@@ -3,22 +3,26 @@
 
 using namespace std;
 
-//Abstract
-class shape{
- virtual void draw() = 0;
-};
+//Static Keywords
+class A{
+    public:
+    A(){
+        cout<<"Constructor"<<endl;
+    }
 
-class circle : public shape{
-public:
-    void draw(){
-        cout<<"Drawing a circle"<<endl;
+    ~A(){
+        cout<<"Destructor"<<endl;
     }
 };
 
 int main(){
 
-    circle c1;
+if(true){
+    static A a1;
+}
 
-    c1.draw();
+cout<<"\n-------------------";
+
+return 0;
 }
 
