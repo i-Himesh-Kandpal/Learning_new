@@ -3,29 +3,22 @@
 
 using namespace std;
 
-//PolyMorphism
-class parent{
-    public:
-
-    void getinfo(){
-        cout<<"kaise ho"<<endl;
-    }
+//Abstract
+class shape{
+ virtual void draw() = 0;
 };
 
-class child : public parent{
-    public:
-
-    void getinfo(){
-        cout<<"kaisn"<<endl;
+class circle : public shape{
+public:
+    void draw(){
+        cout<<"Drawing a circle"<<endl;
     }
 };
 
 int main(){
 
-    // parent p1;
-    child c1;
+    circle c1;
 
-    c1.getinfo();
-
-    return 0;
+    c1.draw();
 }
+
