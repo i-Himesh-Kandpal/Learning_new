@@ -1,7 +1,4 @@
-name = "himesh"
-age = 23
-price = 24.34
+i = 2;
 
-print(type(name)," : ","kaise ho",name)
-print(type(age)," : ","Aumar",age)
-print(type(price)," : ","Kimat",price)
+for i in range(2):
+    print("hello kaise ho")
