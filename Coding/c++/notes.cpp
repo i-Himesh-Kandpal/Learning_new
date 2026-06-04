@@ -36,7 +36,6 @@ class student{
         cout<<"\nDepartment changed : "<<endl;
     }
 
-
     long get(){
       return phn;
     }
