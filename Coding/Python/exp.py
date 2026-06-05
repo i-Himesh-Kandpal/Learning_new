@@ -1,3 +1,3 @@
 a = 2
 
-print("a : ",a)
+print("The value of a :",a)
