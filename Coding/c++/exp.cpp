@@ -7,18 +7,21 @@ int main(){
 
     int num[5] = {1,2,5,7,3};
     int target = 9;
+    int temp;
 
     for(int i = 0; i <= num[4];i++){
 
         for(int j = 0; j<= num[4];j++){
-      num[i] + num[j] == target;
+       temp = num[i] + num[j];
         
-        if(num[i]+num[j] == target){
+        if(temp == target){
             cout<<"num["<<i<<"]"<<" + "<<"num ["<<j<<"]"<<" : "<<target<<endl;
         }
     } 
     }
   
+    cout<<temp;
+    
     return 0;
 }
 
