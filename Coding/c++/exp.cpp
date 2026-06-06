@@ -5,17 +5,20 @@ using namespace std;
 
 int main(){
 
-   vector <int> vec = {1,2,3,4,5};
+    int num[5] = {1,2,5,7,3};
+    int target = 9;
 
-   vec.push_back(2);
-   vec.pop_back();
+    for(int i = 0; i <= num[4];i++){
 
-   for(int i : vec){
-    cout<<i;
-   }
-  cout<<"\n"<<vec.capacity();
-   cout<<endl;
-
+        for(int j = 0; j<= num[4];j++){
+      num[i] + num[j] == target;
+        
+        if(num[i]+num[j] == target){
+            cout<<"num["<<i<<"]"<<" + "<<"num ["<<j<<"]"<<" : "<<target<<endl;
+        }
+    } 
+    }
+  
     return 0;
 }
 
