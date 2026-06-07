@@ -5,23 +5,34 @@ using namespace std;
 
 int main(){
 
-    int num[5] = {1,2,5,7,3};
-    int target = 9;
-    int temp;
+    int i , j;
 
-    for(int i = 0; i <= num[4];i++){
+    int num[5] = {2,3,5,6,8};
+    int target = 10;
+     
+     
 
-        for(int j = 0; j<= num[4];j++){
-       temp = num[i] + num[j];
-        
+
+    for( i = 0; i < 5;i++){
+
+        int temp = 0;
+
+        for( j = 0; j < 5;j++){
+                  
+           temp = 0;
+
+       temp = num[i] + num[j]; 
+
         if(temp == target){
-            cout<<"num["<<i<<"]"<<" + "<<"num ["<<j<<"]"<<" : "<<target<<endl;
-        }
-    } 
+            cout<<"num["<<i<<"]"<<" + "<<"num ["<<j<<"]"<<" : "<<num[i] + num[j]<<endl;
+         
+          }
+         cout<<temp<<endl;
+         }
+         
+         
     }
   
-    cout<<temp;
-    
     return 0;
 }
 
