@@ -5,28 +5,26 @@ using namespace std;
 
 int main(){
 
+    //Two Sum
+
+    vector<int> num = {2,3,5,4,-5,-8,9};
+    int target = 0; 
+
+    cout<<"Enter target : ";
+    cin>>target;
+    
     int i , j;
-    int num[5] = {2,3,5,6,8};
-    int target = 10;
-     
-    for( i = 0; i < 5;i++){
 
-        int temp = 0;
+    for( i = 0; i < num.size();i++){
 
-        for( j = 0; j < 5;j++){
-                  
-       temp = 0;
-       temp = num[i] + num[j]; 
-         
-         }
- cout<<temp<<endl;
-          if(temp == target){
+        for( j = 0; j < 3;j++){
 
-            cout<<"\nnum["<<i<<"]"<<" + "<<"num ["<<j<<"]"<<" : "<<num[i] + num[j]<<endl;
+       if(num[i] + num[j]== target){
+        
+        cout<<"\n---> "<<"num["<<i<<"]"<<" + "<<"num["<<j<<"] : "<<num[i]+num[j]<<endl;
 
-            break;
-          } 
-         
+          }
+       }
     }
   
     return 0;
