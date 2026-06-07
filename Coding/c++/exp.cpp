@@ -13,31 +13,18 @@ int main(){
     cout<<"Enter target : ";
     cin>>target;
 
-    for(int i = 0; i < num.size();i++){
 
-      int Target_possibilty = 0;
+
+    for(int i = 0; i < num.size();i++){
       
         for(int j = i+1; j < num.size();j++){
 
-        cout<<"j : "<<j<<" "<<endl;
-        cout<<"\n---> "<<"num["<<i<<"]"<<" + "<<"num["<<j<<"] : "<<num[i]+num[j]<<endl;
-
-        cout<<"-----"<<endl;
        if( num[i] + num[j] == target && i != j){
 
-       Target_possibilty++;
-        cout<<"\n---> "<<"num["<<i<<"]"<<" + "<<"num["<<j<<"] : "<<num[i]+num[j]<<endl;
-         
-    }
-          cout<<"===="<<endl;
+        cout<<"\n---> "<<"num["<<i<<"]"<<" + "<<"num["<<j<<"] : "<<num[i]+num[j]<<endl;       
+     }
        
         }
-       
-        if(Target_possibilty > 0){
-        break;
-       
-    }
-    
 }
   
     return 0;
