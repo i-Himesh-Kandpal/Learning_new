@@ -13,19 +13,17 @@ int main(){
     cout<<"Enter target : ";
     cin>>target;
 
-
-
     for(int i = 0; i < num.size();i++){
       
         for(int j = i+1; j < num.size();j++){
 
        if( num[i] + num[j] == target && i != j){
 
-        cout<<"\n---> "<<"num["<<i<<"]"<<" + "<<"num["<<j<<"] : "<<num[i]+num[j]<<endl;       
-     }
-       
+        cout<<"\n---> "<<"num["<<i<<"]"<<" + "<<"num["<<j<<"] : "<<num[i]+num[j]<<endl;  
+
+            }     
         }
-}
+   }
   
     return 0;
 }
