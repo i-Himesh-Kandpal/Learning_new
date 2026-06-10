@@ -2,12 +2,11 @@
 #include<vector>
 
 using namespace std;
-// "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"
 int main(){
 
     //Two Sum
 
-    vector<int> num = {2,3,5,4};
+    vector<int> num = {2,3,4};
     int target = 0;
 
     cout<<"Enter target : ";
