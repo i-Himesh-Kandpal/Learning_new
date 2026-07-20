@@ -9,7 +9,7 @@ int main(){
 
   // Lamda
   auto preparedchai = [](int cups){
-    cout << "\npreparing "<< cups << " cups of tea"<<endl;
+    cout << "\npreparing "<< "cups of tea"<<endl;
   };
 
 //helping
